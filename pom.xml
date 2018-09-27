@@ -108,8 +108,9 @@
 										</manifest>
 									</archive>
 									<descriptorRefs>
-										<descriptorRef>-app</descriptorRef>
+										<descriptorRef>jar-with-dependencies</descriptorRef>
 									</descriptorRefs>
+							        <appendAssemblyId>false</appendAssemblyId>
 								</configuration>
 							</execution>
 						</executions>
