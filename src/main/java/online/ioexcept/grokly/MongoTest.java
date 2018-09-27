@@ -40,7 +40,7 @@ public class MongoTest {
 			hashTags.add("#tags");			
 //			tags.add(new DB)
 			BasicDBObject newURL = new BasicDBObject("ip", "127.0.0.1").append("user", "fake-user").append("timestamp", new Date());
-			newURL.append("title","fake-title").append("description","fake-title").append("url","fake-title").append("tags",hashTags);
+			newURL.append("title","fake-title").append("description","fake-description").append("url","fake-url").append("tags",hashTags);
 
 			//System.out.println("Data Display");
 			coll.insert(newURL);
