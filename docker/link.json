@@ -5,5 +5,5 @@
 	title:"",
 	description:"",
 	url:"",
-	tags:"[]"
+	tags:["#mongo", "#java", "#docker"]
 }
