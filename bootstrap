@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+docker stop grokly
+docker rm grokly
+docker rmi grokly
+docker build -t grokly .
+
+
+#docker stop grocklydb
+#docker rm grocklydb
+#docker rmi grockly:db
