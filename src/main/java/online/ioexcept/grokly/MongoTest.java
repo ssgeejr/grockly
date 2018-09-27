@@ -1,34 +1,24 @@
-
-<%@ page 
-	language="java"
-	contentType="text/html; 
-    charset=windows-1256"
-	pageEncoding="windows-1256" 
-	import="com.mongodb.BasicDBObject"
-	import="com.mongodb.DB" 
-	import="com.mongodb.DBCollection"
-	import="com.mongodb.DBCursor" 
-	import="com.mongodb.MongoClient"
-	import="java.net.UnknownHostException"
-	import="java.util.Date"
-%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type"
-	content="text/html; charset=windows-1256">
-<title>MongoDB Test Page</title>
-</head>
-<body>
+package online.ioexcept.grokly;
 
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB; 
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor; 
+import com.mongodb.MongoClient;
+import java.net.UnknownHostException;
+import java.util.Date;
 
-	<%
+
+public class MongoTest {
+
+	public static void main(String[] args) {
 		MongoClient mongoClient = null;
 		try {
 //			mongoClient = new MongoClient();
 //			mongoClient = new MongoClient("gorkly", 27017);
-			mongoClient = new MongoClient("gorkly");
+//			mongoClient = new MongoClient("gorkly");
+			mongoClient = new MongoClient("144.229.218.198");
 			// or, to connect to a replica set, supply a seed list of members
 			//MongoClient mongoClient = new MongoClient(Arrays.asList(new ServerAddress("localhost", 27017),
 			//                                    new ServerAddress("localhost", 27018),
@@ -49,10 +39,10 @@
 			} finally {
 				//mongoClient.dropDatabase("test");
 			}
-		} catch (UnknownHostException e1) {
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
-	%>
-</body>
-</html>
+		}	
+	}
+
+}

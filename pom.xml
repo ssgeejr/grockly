@@ -61,9 +61,10 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
 		<dependency>
 			<groupId>org.mongodb</groupId>
-			<artifactId>mongodb-driver-sync</artifactId>
+			<artifactId>mongo-java-driver</artifactId>
 			<version>3.8.2</version>
 		</dependency>
 	</dependencies>
