@@ -110,7 +110,7 @@
 									<descriptorRefs>
 										<descriptorRef>jar-with-dependencies</descriptorRef>
 									</descriptorRefs>
-							        <appendAssemblyId>false</appendAssemblyId>
+									<appendAssemblyId>false</appendAssemblyId>
 								</configuration>
 							</execution>
 						</executions>
@@ -138,5 +138,13 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.8.2</version>
 		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+
+
+
 	</dependencies>
 </project>

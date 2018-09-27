@@ -4,11 +4,16 @@ package online.ioexcept.grokly;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB; 
 import com.mongodb.DBCollection;
-import com.mongodb.DBCursor; 
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.List;
+import com.google.common.collect.Multiset;
+import com.google.common.collect.Multisets;
+import com.google.common.collect.TreeMultiset;
 
 public class MongoTest {
 
@@ -25,10 +30,18 @@ public class MongoTest {
 			//                                  new ServerAddress("localhost", 27019)));
 	
 			DB db = mongoClient.getDB("grokly");
+			
+			
+			
 			DBCollection coll = db.getCollection("links");
+			List<BasicDBObject> tags = new ArrayList<BasicDBObject>();
+			Multiset<String> hashTags = TreeMultiset.create();
+			hashTags.add("#fake");
+			hashTags.add("#tags");			
+//			tags.add(new DB)
 			BasicDBObject newURL = new BasicDBObject("ip", "127.0.0.1").append("user", "fake-user").append("timestamp", new Date());
-			newURL.append("title","fake-title").append("description","fake-title").append("url","fake-title").append("tags","fake-title");
-	
+			newURL.append("title","fake-title").append("description","fake-title").append("url","fake-title").append("tags",hashTags);
+
 			//System.out.println("Data Display");
 			coll.insert(newURL);
 			DBCursor cursor = coll.find();
